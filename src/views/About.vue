@@ -5,6 +5,7 @@
 </template>
 <script>
 import { api } from '@/api'
+import { utils } from '@/utils'
 export default ({
   data () {
     return {
@@ -12,7 +13,11 @@ export default ({
     }
   },
   created () {
-    api.basic.login({ userName: 'admin', password: '123456' }).then(res => {
+    // 测试时间转换工具类
+    const timeTest = utils.formatDate('1629360995', 'yyyy-MM-dd')
+    console.log(timeTest)
+    // 测试调用接口
+    api.basic.login({ userName: 'admin', pwd: '123456' }).then(res => {
       console.log(res)
     })
   }

@@ -1,6 +1,6 @@
 import { axios } from './auth'
 
-// 项目列表
+// 接口
 export const login = (params) => {
   return axios({
     url: '/login',

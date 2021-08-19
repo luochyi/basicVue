@@ -1,5 +1,5 @@
 import { api } from '@/api'
-
+// 配置工具类
 export const utils = {
   api: api,
   formatDate: (time, fmt) => {
